@@ -8,3 +8,12 @@ f[c]: x -> x^2 + c
 The mandelbrot set is the set of complex numbers c for which iterating 0 over f[c] converges.
 ## Goal
 The goal of this project is to iterate this function over different values of c and draw the convergeant results using simple color coding.
+## Install
+Run the following :
+```shell
+npm install
+source script/env.sh
+bower install
+python -m SimpleHTTPServer 1234
+```
+Then open http://localhost:1234
