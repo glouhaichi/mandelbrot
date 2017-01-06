@@ -3,7 +3,6 @@
 var Mandelbrot = (function () {
 
     var ITERATION_LIMIT = 255;
-    var COLOR_LIMIT = 255;
     var ITERATION_EDGE = 2;
     var ITERATOR_START = new Complex(0);
 
@@ -20,11 +19,11 @@ var Mandelbrot = (function () {
                 break;
             }
         }
-        return Math.floor(count*COLOR_LIMIT/ITERATION_LIMIT);
+        return Math.floor(count);
     };
 
     var getCoordinate = function (n, length) {
-        return (4*n/length - 2);
+        return 2*(ITERATION_EDGE*n/length - 1);
     };
 
     return {
